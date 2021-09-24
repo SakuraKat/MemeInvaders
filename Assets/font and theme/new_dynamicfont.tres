@@ -1,0 +1,7 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://Assets/font and theme/Qdbettercomicsans-jEEeG.ttf" type="DynamicFontData" id=1]
+
+[resource]
+size = 420
+font_data = ExtResource( 1 )

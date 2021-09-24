@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Characters/Enemy/EnemyBongo.tscn" type="PackedScene" id=1]
+
+[node name="wave1" type="Node"]
+
+[node name="EnemyBongo" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1552, 337 )
+
+[node name="EnemyBongo2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1802, 31 )
+
+[node name="EnemyBongo3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 906, 399 )
+
+[node name="EnemyBongo4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 834, 211 )
+
+[node name="EnemyBongo5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 310, 161 )
