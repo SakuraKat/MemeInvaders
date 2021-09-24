@@ -12,7 +12,7 @@
 [ext_resource path="res://Assets/pepegapls/pepegapls09.png" type="Texture" id=10]
 [ext_resource path="res://Source/Objects/EnemyBullet.gd" type="Script" id=11]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 6 ) ],
 "loop": true,
@@ -20,7 +20,7 @@ animations = [ {
 "speed": 25.0
 } ]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
 radius = 16.0176
 
 [node name="EnemyBullet" type="KinematicBody2D"]
@@ -31,14 +31,12 @@ script = ExtResource( 11 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
-frames = SubResource( 2 )
-frame = 9
+frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
 position = Vector2( -0.75, 0.25 )
-shape = SubResource( 1 )
-
-[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+shape = SubResource( 2 )
 
 [node name="VisibilityEnabler2D2" type="VisibilityEnabler2D" parent="."]

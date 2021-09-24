@@ -7,18 +7,19 @@
 script = ExtResource( 2 )
 
 [node name="EnemyBongo" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1274, 467 )
 
 [node name="EnemyBongo4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 672, 0 )
+position = Vector2( 1578, 192 )
 
 [node name="EnemyBongo5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1320, 64 )
+position = Vector2( 958, 194 )
 
 [node name="EnemyBongo3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1512, 216 )
+position = Vector2( 1718, 408 )
 
 [node name="EnemyBongo6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 896, 96 )
+position = Vector2( 630, 236 )
 
 [node name="EnemyBongo2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 448, 136 )
+position = Vector2( 208, 186 )

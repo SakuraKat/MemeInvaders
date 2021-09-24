@@ -3,10 +3,10 @@
 [ext_resource path="res://Assets/hypers.png" type="Texture" id=1]
 [ext_resource path="res://Source/Characters/Player/Player.gd" type="Script" id=2]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 55.2303, 10 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 59.1195, 1.14752 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -15,7 +15,7 @@ script = ExtResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 rotation = -3.14159
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -29,6 +29,6 @@ collision_mask = 8
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 3.36032e-06, 38.4375 )
 rotation = 3.14159
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

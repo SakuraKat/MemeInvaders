@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Source/Main/Main.gd" type="Script" id=1]
 [ext_resource path="res://Source/Characters/Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Source/Characters/Enemy/EnemyBongo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/bg.png" type="Texture" id=4]
-[ext_resource path="res://Source/waves/wave1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Source/waves/wave2.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1005.61, 10 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -29,12 +29,17 @@ wait_time = 0.001
 one_shot = true
 autostart = true
 
-[node name="wave1" parent="." instance=ExtResource( 5 )]
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 997.888, 981.602 )
 
-[node name="EnemyBongo" parent="." instance=ExtResource( 3 )]
-position = Vector2( 999.41, 559.745 )
+[node name="WaveTimer" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
 
-[node name="wave2" parent="." instance=ExtResource( 6 )]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 941.888, 1080 )
+shape = SubResource( 1 )
+
+[connection signal="timeout" from="WaveTimer" to="." method="_on_WaveTimer_timeout"]
